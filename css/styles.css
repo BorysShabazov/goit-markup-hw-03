@@ -218,6 +218,9 @@ header {
 .work-item:not(:last-child) {
   margin-right: 24px;
 }
+.work-item {
+  border: border 1px solid var(--footer-text-color);
+}
 
 /* team */
 
