@@ -29,18 +29,25 @@ body {
 }
 
 .container {
-  width: 1158px;
+  width: 100%;
+  max-width: 1158px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
 
-  /* outline: 2px solid indigo; */
+  outline: 2px solid indigo;
 }
 
 ul {
   list-style: none;
   padding-left: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .link {
@@ -51,6 +58,34 @@ ul {
   display: flex;
 }
 
+/* sections */
+.section {
+  padding: 120px 0;
+}
+.section-title {
+  margin-bottom: 72px;
+
+  color: var(--titel-text-color);
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-transform: capitalize;
+}
+.section-sub-title {
+  margin-bottom: 8px;
+
+  color: var(--titel-text-color);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+.section-text {
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
 /* heder */
 header {
   border-bottom: 1px solid var(--footer-text-color);
@@ -58,6 +93,7 @@ header {
 .header {
   padding-left: 0;
   padding-right: 0;
+  display: flex;
 }
 .logo {
   color: var(--logo-blue-color);
@@ -65,6 +101,8 @@ header {
   letter-spacing: 0.03em;
   font-size: 18px;
   line-height: 1.33;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 .black-logo {
   color: var(--titel-text-color);
@@ -76,13 +114,14 @@ header {
 /* site nav */
 .main-nav {
   align-items: center;
+  display: flex;
+  gap: 76px;
 }
 .site-nav {
-  margin-left: 76px;
+  display: flex;
+  gap: 40px;
 }
-.site-nav-item:not(:last-child) {
-  margin-right: 40px;
-}
+
 .nav-link {
   color: var(--titel-text-color);
   font-weight: 500;
@@ -114,10 +153,10 @@ header {
 /* addres */
 .address {
   justify-content: flex-end;
+  display: flex;
+  gap: 40px;
 }
-.address-item:not(:last-child) {
-  margin-right: 40px;
-}
+
 .address-link {
   color: var(--main-text-color);
   font-style: normal;
@@ -167,34 +206,6 @@ header {
   background-color: var(--nav-hover-caolor);
 }
 
-/* sections */
-.section {
-  padding: 120px 141px;
-}
-.section-title {
-  margin-bottom: 72px;
-
-  color: var(--titel-text-color);
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-align: center;
-  text-transform: capitalize;
-}
-.section-sub-title {
-  margin-bottom: 8px;
-
-  color: var(--titel-text-color);
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-}
-.section-text {
-  letter-spacing: 0.02em;
-  line-height: 1.5;
-}
-
 /* skills */
 .section-skills {
   padding-bottom: 0;
@@ -202,23 +213,20 @@ header {
 .skills {
   display: flex;
   flex-wrap: wrap;
+  gap: 24px;
 }
 .skills-item {
-  width: 264px;
-}
-.skills-item:not(:last-child) {
-  margin-right: 24px;
+  flex-basis: calc((100% - 72px) / 4);
 }
 
 /* What are we doing */
 .work-list {
   display: flex;
   flex-wrap: wrap;
-}
-.work-item:not(:last-child) {
-  margin-right: 24px;
+  gap: 24px;
 }
 .work-item {
+  flex-basis: calc((100% - 48px) / 3);
   border: border 1px solid var(--footer-text-color);
 }
 
@@ -230,22 +238,22 @@ header {
 .team-list {
   display: flex;
   flex-wrap: wrap;
+  gap: 24px;
 }
 .teammate {
+  flex-basis: calc((100% - 72px) / 4);
   background-color: var(--main-wight-color);
   text-align: center;
 }
-.teammate:not(:last-child) {
-  margin-right: 24px;
-}
+
 .teammate-name {
-  padding: 32px 16px;
+  margin: 32px 0;
 }
 
 /* footer */
 .footer-text {
   margin-top: 16px;
-  margin-right: 864px;
+  width: 264px;
 
   color: var(--footer-text-color);
   line-height: 1.5;
