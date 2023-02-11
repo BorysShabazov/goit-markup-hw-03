@@ -29,14 +29,27 @@ body {
 }
 
 .container {
-  width: 100%;
-  max-width: 1158px;
+  width: 1158px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
 
   outline: 2px solid indigo;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 ul {
@@ -54,14 +67,12 @@ img {
   text-decoration: none;
 }
 
-.display-flex {
-  display: flex;
-}
-
 /* sections */
+
 .section {
   padding: 120px 0;
 }
+
 .section-title {
   margin-bottom: 72px;
 
@@ -72,6 +83,7 @@ img {
   text-align: center;
   text-transform: capitalize;
 }
+
 .section-sub-title {
   margin-bottom: 8px;
 
@@ -81,42 +93,52 @@ img {
   line-height: 1.2;
   letter-spacing: 0.02em;
 }
+
 .section-text {
   letter-spacing: 0.02em;
   line-height: 1.5;
 }
 
 /* heder */
-header {
-  border-bottom: 1px solid var(--footer-text-color);
+
+.header-container {
+  display: flex;
+  align-items: center;
 }
+
 .header {
+  border-bottom: 1px solid var(--footer-text-color);
   padding-left: 0;
   padding-right: 0;
   display: flex;
 }
+
 .logo {
   color: var(--logo-blue-color);
   font-family: Raleway, sans-serif;
   letter-spacing: 0.03em;
   font-size: 18px;
   line-height: 1.33;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  text-transform: uppercase;
 }
+
 .black-logo {
   color: var(--titel-text-color);
 }
+
 .wight-logo {
   color: var(--logo-wight-color);
 }
 
 /* site nav */
+
 .main-nav {
   align-items: center;
   display: flex;
   gap: 76px;
+  margin-right: auto;
 }
+
 .site-nav {
   display: flex;
   gap: 40px;
@@ -132,13 +154,16 @@ header {
   padding-top: 24px;
   padding-bottom: 24px;
 }
+
 .nav-link:hover,
 .nav-link:focus {
   color: var(--nav-hover-caolor);
 }
+
 .nav-link.current {
   color: var(--nav-hover-caolor);
 }
+
 /* .current::after {
   content: '';
   position: absolute;
@@ -151,6 +176,7 @@ header {
 } */
 
 /* addres */
+
 .address {
   justify-content: flex-end;
   display: flex;
@@ -167,24 +193,31 @@ header {
   padding-top: 24px;
   padding-bottom: 24px;
 }
+
 .address-link:hover,
 .address-link:focus {
   color: var(--nav-hover-caolor);
 }
 
 /* hero */
+
 .hero {
   text-align: center;
   background-color: var(--titel-text-color);
+  padding: 188px 0;
 }
+
 .hero-title {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   color: var(--main-wight-color);
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
-
   margin-bottom: 48px;
 }
+
 .order-btn {
   border-radius: 4px;
   padding: 16px 32px;
@@ -201,20 +234,23 @@ header {
   font-size: 16px;
   line-height: 1.5;
 }
+
 .order-btn:hover,
 .order-btn:focus {
   background-color: var(--nav-hover-caolor);
 }
 
 /* skills */
+
 .section-skills {
   padding-bottom: 0;
 }
+
 .skills {
   display: flex;
-  flex-wrap: wrap;
   gap: 24px;
 }
+
 .skills-item {
   flex-basis: calc((100% - 72px) / 4);
 }
@@ -225,6 +261,7 @@ header {
   flex-wrap: wrap;
   gap: 24px;
 }
+
 .work-item {
   flex-basis: calc((100% - 48px) / 3);
   border: border 1px solid var(--footer-text-color);
@@ -235,11 +272,13 @@ header {
 .team {
   background-color: var(--logo-wight-color);
 }
+
 .team-list {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
 }
+
 .teammate {
   flex-basis: calc((100% - 72px) / 4);
   background-color: var(--main-wight-color);
@@ -247,7 +286,7 @@ header {
 }
 
 .teammate-name {
-  margin: 32px 0;
+  padding: 32px 0;
 }
 
 /* footer */
@@ -259,20 +298,21 @@ header {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
+
 .footer {
   background-color: var(--titel-text-color);
-}
-.footer-cont {
   padding-top: 100px;
   padding-bottom: 100px;
 }
 
 /* portfolio */
+
 .portfolio {
   padding-top: 96px;
 }
 
 /* filter */
+
 .filter-btn {
   padding: 12px 24px;
   border-radius: 4px;
@@ -294,6 +334,7 @@ header {
   color: var(--main-wight-color);
   background-color: var(--nav-hover-caolor);
 }
+
 .filter {
   display: flex;
   margin-bottom: 72px;
@@ -308,6 +349,7 @@ header {
   row-gap: 48px;
   column-gap: 24px;
 }
+
 .services-items {
   border: 1px solid var(--footer-text-color);
   flex-basis: calc((100% - 48px) / 3);
