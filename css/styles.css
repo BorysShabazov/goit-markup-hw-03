@@ -108,10 +108,9 @@ img {
 
 .header {
   border-bottom: 1px solid var(--footer-text-color);
-  padding-left: 0;
-  padding-right: 0;
-  display: flex;
 }
+
+/* site nav */
 
 .logo {
   color: var(--logo-blue-color);
@@ -129,8 +128,6 @@ img {
 .wight-logo {
   color: var(--logo-wight-color);
 }
-
-/* site nav */
 
 .main-nav {
   align-items: center;
@@ -178,7 +175,6 @@ img {
 /* addres */
 
 .address {
-  justify-content: flex-end;
   display: flex;
   gap: 40px;
 }
@@ -208,9 +204,10 @@ img {
 }
 
 .hero-title {
-  width: 100%;
+  width: 500px;
   margin-left: auto;
   margin-right: auto;
+
   color: var(--main-wight-color);
   font-size: 56px;
   line-height: 1.07;
